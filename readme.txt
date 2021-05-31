@@ -12,8 +12,30 @@ This screen shot shows the GraphQL query { hello } being issued and giving a res
 
 npm install lodash
 http://localhost:4000/graphql in url in graphiql:
+Find book:
 {
     id,
     genre,
     name
   }
+
+Find author:
+{
+  author(id: 1) {
+    id
+    name
+    age
+  }
+} 
+
+Find book and belongs'author:
+{
+  book(id: 1) {
+    id
+    name
+    author{
+    name
+    age
+  }
+  }
+}
