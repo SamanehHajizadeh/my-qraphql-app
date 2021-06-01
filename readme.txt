@@ -66,3 +66,24 @@ Find all books/authors :
   }
  }
 }
+-------------------------------------
+npm install mongodb --save
+npm install mongoose --save
+
+mkdir data
+mkdir db
+inside data/db:
+mongod --dbpath= --bind_ip 127.0.0.1
+
+***
+Open another command window and then type :
+mongo
+db
+usr library --(library is my DB name herer)
+dbdb.help()
+****
+db.books.insert({ name: "hafez", genre: "Poem",id: '1', authorId: '1' });
+db.books.find.pretty();
+db.books.deleteMany() 
+ var id = new ObjectId();
+id.getTimestamp();
