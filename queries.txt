@@ -1,0 +1,37 @@
+***
+Open another command window and then type :
+mongo
+db
+usr library --(library is my DB name herer)
+db.help()
+****
+
+db.createUser(
+  {
+    user: "samane",
+    pwd: "123456",  // or cleartext password
+    roles: [
+       { role: "readWrite", db: "dbAdmin" }
+    ]
+  }
+);
+
+db.createCollection('books');
+db.createCollection('authors');
+***
+
+db.books.insert({ name: "hafez", genre: "Poem",id: '1', authorId: '1' });
+db.books.find.pretty();
+db.books.deleteMany({"genre" : "Fantasy"});
+db.books.deleteOne({ _id: "60b78146a0aa4227e001f5b6" });
+db.books.updateOne({_id : "60b78146a0aa4227e001f5b6" }, {
+  $set: {
+         authorId: "60b77fb3a0aa4227e001f5b4"
+     }
+ })
+
+****
+
+
+
+
